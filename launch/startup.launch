@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <param name="frame_id" value="odom" />
+
+    <arg name="file_path" default="/home/crange/ros_ws/src/txt2bag/data/" />
+    <arg name="input_file" default="ins.txt" />
+    <arg name="output_file" default="ins.bag" />
+
+
+    <node pkg="txt2bag" type="ins_txt2bag" name="ins_txt2bag" output="screen" args="$(arg file_path)$(arg input_file) $(arg file_path)$(arg output_file)" />
+
+</launch>
